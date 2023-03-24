@@ -84,12 +84,12 @@ class _AdminState extends State<Admin> {
             return ListView.builder(
               itemCount: snapshot.data!.docs.length,
               itemBuilder: (BuildContext context, int index) {
-                DocumentSnapshot documentSnapshot_1 = snapshot.data!.docs[index];
+                DocumentSnapshot documentSnapshot = snapshot.data!.docs[index];
 
                 return StreamBuilder<QuerySnapshot>(
                     stream: _firestore
                         .collection("chatroom")
-                        .doc(documentSnapshot_1.id)
+                        .doc(documentSnapshot.id)
                         .collection("chats")
                         .orderBy("time", descending: true)
                         .limit(1)
@@ -101,7 +101,7 @@ class _AdminState extends State<Admin> {
 
                       Map<String, dynamic> map = snapshot.data!.docs[0].data() as Map<String, dynamic>;
                       return ListTile(
-                        title: Text(documentSnapshot_1.id),
+                        title: Text(documentSnapshot.id),
                         subtitle: Text(
                           map["type"] == "text"
                               ? map["messages"] as String
@@ -113,19 +113,19 @@ class _AdminState extends State<Admin> {
                         onTap: () async {
                           await _firestore
                               .collection("chatroom")
-                              .doc(documentSnapshot_1.id)
+                              .doc(documentSnapshot.id)
                               .collection("chats")
                               .get()
                               .then((snapshot) {
                             snapshot.docs.forEach((doc) async {
-                              await _firestore.collection("chatroom").doc(documentSnapshot_1.id).collection("chats").doc(doc.id).set({
+                              await _firestore.collection("chatroom").doc(documentSnapshot.id).collection("chats").doc(doc.id).set({
                                 "read": true
                               }, SetOptions(merge: true));
                             });
                           });
                           Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => AdminChatroom(chatroomId: documentSnapshot_1["uid"]))
+                              MaterialPageRoute(builder: (context) => AdminChatroom(chatroomId: documentSnapshot["uid"]))
                           );
                         },
                       );

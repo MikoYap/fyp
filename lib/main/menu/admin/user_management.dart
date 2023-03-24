@@ -21,7 +21,7 @@ class UserManagement {
       return Login();
 
     } else {
-      CollectionReference admin = _firestore.collection('MyAdmin');
+      CollectionReference admin = _firestore.collection('Admin');
       return FutureBuilder<DocumentSnapshot>(
         future: admin.doc("ADM").get(),
         builder:

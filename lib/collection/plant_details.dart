@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:fyp/data/plant.dart';
 
-class PlantDetails extends StatelessWidget {
+class PlantDetails extends StatefulWidget {
   final Plant plant;
+
   PlantDetails({required this.plant});
 
+  @override
+  State<StatefulWidget> createState() => PlantDetailsState();
+}
+
+class PlantDetailsState extends State<PlantDetails> {
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class PlantDetails extends StatelessWidget {
             // Plant image
             Center(
               child: Image.asset(
-                '${plant.image}',
+                '${widget.plant.image}',
                 height: 300,
                 fit: BoxFit.fill,
               ),
@@ -52,7 +58,7 @@ class PlantDetails extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "${plant.family}",
+                        "${widget.plant.family}",
                         style: TextStyle(
                           fontSize: 16,
                         ),
@@ -83,7 +89,7 @@ class PlantDetails extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "${plant.genus}",
+                        "${widget.plant.genus}",
                         style: TextStyle(
                           fontSize: 16,
                         ),
@@ -115,7 +121,7 @@ class PlantDetails extends StatelessWidget {
                     children: [
                       Flexible(
                           child: Text(
-                            "${plant.species_name}",
+                            "${widget.plant.species_name}",
                             style: TextStyle(
                               fontStyle: FontStyle.italic,
                               fontSize: 16,
@@ -148,7 +154,7 @@ class PlantDetails extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "${plant.common_name}",
+                        "${widget.plant.common_name}",
                         style: TextStyle(
                           fontSize: 16,
                         ),
