@@ -1,18 +1,35 @@
 [
   {
-    "species_name":"Bauhinia tomentosa L.",
-    "common_name":"St. Thomas Tree",
-    "family":"Zolly",
-    "genus":"Gilbert",
-    "image":"assets/images/bauhinia_tomentosa.jpg"
+    "species_name":"sp 1",
+    "common_name":"cm 1",
+    "family":"fm 1",
+    "genus":"gn 1",
+    "image":"assets/images/sp1/sp1.jpg",
+    "images": [
+      "assets/images/sp1/sp1a.jpg",
+      "assets/images/sp1/sp1b.jpg",
+      "assets/images/sp1/sp1c.jpg",
+      "assets/images/sp1/sp1d.jpg",
+      "assets/images/sp1/sp1e.jpg"
+    ]
   },
 
   {
-    "species_name":"Abutilon auritum (Wall. ex Link) Sweet",
-    "common_name":"Asian Indian Mallow",
-    "family":"Gamaliel",
-    "genus":"Bread",
-    "image":"assets/images/abutilon_auritum.jpg"
+    "species_name":"sp 2",
+    "common_name":"cm 2",
+    "family":"fm 2",
+    "genus":"gn 2",
+    "image":"assets/images/sp2/sp2.jpg",
+    "images":[
+      "assets/images/sp2/sp2a.jpg",
+      "assets/images/sp2/sp2b.jpg",
+      "assets/images/sp2/sp2c.jpg",
+      "assets/images/sp2/sp2d.jpg",
+      "assets/images/sp2/sp2e.jpg",
+      "assets/images/sp2/sp2f.jpg",
+      "assets/images/sp2/sp2g.jpg",
+      "assets/images/sp2/sp2h.jpg"
+    ]
   },
 
   {
@@ -20,7 +37,14 @@
     "common_name":"Barbados Cherry",
     "family":"Bartholomeo",
     "genus":"Bainbrigge",
-    "image":"assets/images/malpighia_emarginata.jpg"
+    "image":"assets/images/malpighia_emarginata.jpg",
+    "images":[
+      "assets/images/sp1/sp1a.jpg",
+      "assets/images/sp1/sp1b.jpg",
+      "assets/images/sp1/sp1c.jpg",
+      "assets/images/sp1/sp1d.jpg",
+      "assets/images/sp1/sp1e.jpg"
+    ]
   },
 
   {
@@ -28,7 +52,14 @@
     "common_name":"Largeflower Woodvine",
     "family":"Jdavie",
     "genus":"Andreolli",
-    "image":"assets/images/sabicea_cinerea.jpg"
+    "image":"assets/images/sabicea_cinerea.jpg",
+    "images":[
+      "assets/images/sp1/sp1a.jpg",
+      "assets/images/sp1/sp1b.jpg",
+      "assets/images/sp1/sp1c.jpg",
+      "assets/images/sp1/sp1d.jpg",
+      "assets/images/sp1/sp1e.jpg"
+    ]
   },
 
   {
@@ -36,126 +67,13 @@
     "common_name":"Balloonpod Milkvetch",
     "family":"Letisha",
     "genus":"Pickford",
-    "image":"assets/images/astragalus_whitneyi.jpg"
-  },
-
-  {
-    "species_name":"Stenotus armerioides Nutt.",
-    "common_name":"Thrift Mock Goldenweed",
-    "family":"Manya",
-    "genus":"Pietruszka",
-    "image":"assets/images/bauhinia_tomentosa.jpg"
-  },
-
-  {
-    "species_name":"Rosa ferruiginea Vill.",
-    "common_name":"Redleaf Rose",
-    "family":"Christel",
-    "genus":"Camillo",
-    "image":"assets/images/abutilon_auritum.jpg"
-  },
-
-  {
-    "species_name":"Mentzelia nuda (Pursh) Torr. & A. Gray",
-    "common_name":"Bractless Blazingstar",
-    "family":"Deni",
-    "genus":"Gepheart",
-    "image":"assets/images/malpighia_emarginata.jpg"
-  },
-
-  {
-    "species_name":"Aristida purpurea Nutt. var. fendleriana (Steud.) Vasey",
-    "common_name":"Fendler's Threeawn",
-    "family":"Balduin",
-    "genus":"Gwyn",
-    "image":"assets/images/sabicea_cinerea.jpg"
-  },
-
-  {
-    "species_name":"Muhlenbergia dumosa Scribn. ex Vasey",
-    "common_name":"Bamboo Muhly",
-    "family":"Brunhilde",
-    "genus":"Woodford",
-    "image":"assets/images/astragalus_whitneyi.jpg"
-  },
-
-  {
-    "species_name":"Gentianella microcalyx (Lemmon) J.M. Gillett",
-    "common_name":"Chiricahua Dwarf Gentian",
-    "family":"Jilli",
-    "genus":"Mealiffe",
-    "image":"assets/images/bauhinia_tomentosa.jpg"
-  },
-
-  {
-    "species_name":"Echinocereus coccineus Engelm. var. arizonicus (Rose ex Orcutt) D.J. Ferguson",
-    "common_name":"Arizona Hedgehog Cactus",
-    "family":"Ingeborg",
-    "genus":"Fruen",
-    "image":"assets/images/abutilon_auritum.jpg"
-  },
-
-  {
-    "species_name":"Lecanora caesiorubella Ach. ssp. merrillii Imshaug & Brodo",
-    "common_name":"Merrill's Rim Lichen",
-    "family":"Cristi",
-    "genus":"Keld",
-    "image":"assets/images/malpighia_emarginata.jpg"
-  },
-
-  {
-    "species_name":"Phoradendron rubrum (L.) Griseb.",
-    "common_name":"Mahogany Mistletoe",
-    "family":"Sabine",
-    "genus":"Gaze",
-    "image":"assets/images/sabicea_cinerea.jpg"
-  },
-
-  {
-    "species_name":"Eugenia corozalensis Britton",
-    "common_name":"Sperry Guava",
-    "family":"Robert",
-    "genus":"Cains",
-    "image":"assets/images/astragalus_whitneyi.jpg"
-  },
-
-  {
-    "species_name":"Deutzia gracilis Siebold & Zucc.",
-    "common_name":"Slender Pride Of Rochester",
-    "family":"Adamo",
-    "genus":"Simonich",
-    "image":"assets/images/bauhinia_tomentosa.jpg"
-  },
-
-  {
-    "species_name":"Aquilegia flabellata Siebold & Zucc.",
-    "common_name":"Fan Columbine",
-    "family":"Roseanne",
-    "genus":"MacGeaney",
-    "image":"assets/images/abutilon_auritum.jpg"
-  },
-
-  {
-    "species_name":"Chaenactis nevii A. Gray",
-    "common_name":"John Day's Pincushion",
-    "family":"Reece",
-    "genus":"Le Ball",
-    "image":"assets/images/malpighia_emarginata.jpg"
-  },
-
-  {
-    "species_name":"Astragalus aridus A. Gray",
-    "common_name":"Annual Desert Milkvetch",
-    "family":"Saw",
-    "genus":"Snoxall",
-    "image":"assets/images/sabicea_cinerea.jpg"
-  },
-
-  {
-    "species_name":"Potentilla thurberi A. Gray",
-    "common_name":"Scarlet Cinquefoil",
-    "family":"Alberto",
-    "genus":"Mahony",
-    "image":"assets/images/astragalus_whitneyi.jpg"
+    "image":"assets/images/astragalus_whitneyi.jpg",
+    "images":[
+      "assets/images/sp1/sp1a.jpg",
+      "assets/images/sp1/sp1b.jpg",
+      "assets/images/sp1/sp1c.jpg",
+      "assets/images/sp1/sp1d.jpg",
+      "assets/images/sp1/sp1e.jpg"
+    ]
   }
 ]

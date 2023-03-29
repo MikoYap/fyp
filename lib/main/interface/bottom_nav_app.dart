@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:fyp/home/home.dart';
 import 'package:fyp/collection/collection.dart';
@@ -21,20 +20,15 @@ class BottomNavApp extends StatefulWidget {
 
 class _BottomNavAppState extends State<BottomNavApp> {
   int currentTab = 0;
-
-
   final List<Widget> screens = [
     Home(),
     Collection(),
     Location(),
     Chat(),
   ];
-
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = Home();
-
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
 
 
   _onSignInPressed() {
@@ -61,13 +55,13 @@ class _BottomNavAppState extends State<BottomNavApp> {
         bucket: bucket,
       ),
 
-
       floatingActionButton: Visibility(
         visible: !showFab,
         child: Container(
           alignment: Alignment.bottomCenter,
           padding: EdgeInsets.only(bottom: 5),
           child: FloatingActionButton(
+            heroTag: "qrCodeScannerFab",
             child: Container(
               width: 60,
               height: 60,
@@ -104,7 +98,6 @@ class _BottomNavAppState extends State<BottomNavApp> {
 
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
 
       bottomNavigationBar: BottomAppBar(
         child: Container(

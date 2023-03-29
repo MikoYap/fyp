@@ -87,15 +87,6 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
         backgroundColor: Colors.white,
         elevation: 0,
 
-        /*flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: <Color>[Color.fromRGBO(7, 113, 9, 1), Color.fromRGBO(199, 248, 0, 1)]),
-          ),
-        ),*/
-
         actions: [
           PopupMenuButton(
               icon: Icon(
@@ -137,6 +128,7 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
         ],
       ),
 
+      // Button scroll to top
       floatingActionButton: Container(
         height: 50,
         width: 50,
@@ -145,6 +137,7 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
             duration: Duration(milliseconds: 500),  //show/hide animation
             opacity: showbtn ? 1.0 : 0.0, //set obacity to 1 on visible, or hide
             child: FloatingActionButton(
+              heroTag: "scrollToTopFab",
               onPressed: () {
                 scrollController.animateTo( //go to top of scroll
                     0,  //scroll offset to go
@@ -214,9 +207,6 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
               width: 1 ,
             ),
           ),
-
-
-
         ),
       ),
     );

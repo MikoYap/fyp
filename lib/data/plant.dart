@@ -4,6 +4,7 @@ class Plant {
   String? family;
   String? genus;
   String? image;
+  List? images;
 
   Plant(
       {
@@ -11,9 +12,10 @@ class Plant {
         this.common_name,
         this.family,
         this.genus,
-        this.image
+        this.image,
+        this.images
       }
-      );
+  );
 
   Plant.fromJson(Map<String, dynamic> json) {
     species_name = json['species_name'];
@@ -21,6 +23,7 @@ class Plant {
     family = json['family'];
     genus = json['genus'];
     image = json['image'];
+    images = json['images'];
   }
 
   Map<String, dynamic> toJson() {
@@ -30,6 +33,7 @@ class Plant {
     data['family'] = this.family;
     data['genus'] = this.genus;
     data['image'] = this.image;
+    data['images'] = this.images;
     return data;
   }
 }
