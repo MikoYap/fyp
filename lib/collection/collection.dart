@@ -3,6 +3,7 @@ import 'package:fyp/data/plant.dart';
 import 'package:fyp/collection/repository.dart';
 import 'package:fyp/collection/plant_tile.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
+import 'package:fyp/main/menu/about_us.dart';
 
 
 
@@ -116,7 +117,10 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
                 if (value == 0) {
                   print("User Manual menu is selected.");
                 } else if (value == 1) {
-                  print("About Us menu is selected.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
                 } else if (value == 2) {
                   Navigator.push(
                     context,

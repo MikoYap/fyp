@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -14,7 +13,8 @@ import 'package:uuid/uuid.dart';
 
 class AdminChatroom extends StatefulWidget {
   final String chatroomId;
-  AdminChatroom({required this.chatroomId});
+  final String chatroomName;
+  AdminChatroom({required this.chatroomId, required this.chatroomName});
 
   @override
   State<AdminChatroom> createState() => _AdminChatroomState();
@@ -25,7 +25,6 @@ class _AdminChatroomState extends State<AdminChatroom> {
   final TextEditingController _message = TextEditingController();
   final ScrollController _scrollController = ScrollController();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   int _previousMessageCount = 0;
   var _isScrolledToBottom = true;
@@ -41,7 +40,7 @@ class _AdminChatroomState extends State<AdminChatroom> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.chatroomId,
+          widget.chatroomName,
           style: TextStyle(fontSize: 18),
         ),
         automaticallyImplyLeading: false,
@@ -220,7 +219,6 @@ class _AdminChatroomState extends State<AdminChatroom> {
       await _firestore
           .collection("chatroom")
           .doc(widget.chatroomId).set({
-        "uid": widget.chatroomId,
         "time": FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
 
@@ -259,19 +257,19 @@ class _AdminChatroomState extends State<AdminChatroom> {
         .collection("chats")
         .doc(fileName)
         .set({
-      "sendby": "Admin",
-      "messages": "",
-      "type": "img",
-      "time": FieldValue.serverTimestamp(),
-      "read": true,
-    });
+          "sendby": "Admin",
+          "messages": "",
+          "type": "img",
+          "time": FieldValue.serverTimestamp(),
+          "read": true,
+        });
 
     await _firestore
         .collection("chatroom")
         .doc(widget.chatroomId).set({
-      "uid": widget.chatroomId,
-      "time": FieldValue.serverTimestamp(),
-    });
+          "uid": widget.chatroomId,
+          "time": FieldValue.serverTimestamp(),
+        });
 
     var ref = FirebaseStorage.instance.ref().child("images").child("$fileName.jpg");
 

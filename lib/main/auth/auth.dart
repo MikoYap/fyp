@@ -21,7 +21,7 @@ class AuthService {
   }
 
   // Sign in anonymous
-  Future signInAnonymous() async {
+  Future signInAnonymous(String name) async {
     try {
       UserCredential result = await _auth.signInAnonymously();
       User? user = result.user;
@@ -32,6 +32,7 @@ class AuthService {
 
         await _firestore.collection("users").doc(_auth.currentUser!.uid).set({
           "uid": _auth.currentUser!.uid,
+          "name": name,
         });
         return _userFromFirebaseUser(user!);
       }

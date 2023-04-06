@@ -9,12 +9,14 @@ import 'package:flutter_chat_bubble/clippers/chat_bubble_clipper_5.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
+import 'package:fyp/main/menu/about_us.dart';
 
 
 
 class UserChatroom extends StatefulWidget {
   final String chatroomId;
-  UserChatroom({required this.chatroomId});
+  final String chatroomName;
+  UserChatroom({required this.chatroomId, required this.chatroomName});
 
   @override
   State<UserChatroom> createState() => _UserChatroomState();
@@ -90,7 +92,10 @@ class _UserChatroomState extends State<UserChatroom> {
                 if (value == 0) {
                   print("User Manual menu is selected.");
                 } else if (value == 1) {
-                  print("About Us menu is selected.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
                 } else if (value == 2) {
                   Navigator.push(
                     context,
@@ -131,7 +136,8 @@ class _UserChatroomState extends State<UserChatroom> {
                                   _scrollController.position.maxScrollExtent,
                                   duration: Duration(milliseconds: 400),
                                   curve: Curves.easeOut
-                              );                          });
+                              );
+                            });
                           };
                           _isCallbackCalled = false;
 
@@ -254,6 +260,7 @@ class _UserChatroomState extends State<UserChatroom> {
           .collection("chatroom")
           .doc(widget.chatroomId).set({
         "uid": widget.chatroomId,
+        "name": widget.chatroomName,
         "time": FieldValue.serverTimestamp(),
       });
 
@@ -301,6 +308,7 @@ class _UserChatroomState extends State<UserChatroom> {
         .collection("chatroom")
         .doc(widget.chatroomId).set({
       "uid": widget.chatroomId,
+      "name": widget.chatroomName,
       "time": FieldValue.serverTimestamp(),
     });
 

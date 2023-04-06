@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
+import 'package:fyp/main/menu/about_us.dart';
 
 
 
@@ -25,6 +26,13 @@ class _LocationState extends State<Location> {
     infoWindow: InfoWindow(title: "Ulu Gombak Forest Reserve"),
     icon: BitmapDescriptor.defaultMarker,
     position: LatLng(3.30197, 101.78273),
+  );
+
+  static final Marker _sp1 = Marker(
+    markerId: MarkerId("_sp1"),
+    infoWindow: InfoWindow(title: "Sp1"),
+    icon: BitmapDescriptor.defaultMarker,
+    position: LatLng(3.32503, 101.75242),
   );
 
 
@@ -80,7 +88,10 @@ class _LocationState extends State<Location> {
                 if (value == 0) {
                   print("User Manual menu is selected.");
                 } else if (value == 1) {
-                  print("About Us menu is selected.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
                 } else if (value == 2) {
                   Navigator.push(
                     context,
@@ -93,8 +104,11 @@ class _LocationState extends State<Location> {
       ),
 
       body: GoogleMap(
-        mapType: MapType.satellite,
-        markers: {_uluGombakForestReserve},
+        mapType: MapType.normal,
+        markers: {
+          _uluGombakForestReserve,
+          _sp1,
+        },
         onMapCreated: _onMapCreated,
         initialCameraPosition: CameraPosition(
           target: _center,

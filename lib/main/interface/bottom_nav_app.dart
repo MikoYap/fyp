@@ -33,11 +33,13 @@ class _BottomNavAppState extends State<BottomNavApp> {
 
   _onSignInPressed() {
     String uid;
+    String name;
     FirebaseFirestore.instance.collection("users").doc(_auth.currentUser!.uid).get().then((doc) {
       if (doc.exists) {
         uid = doc.data()!["uid"];
+        name = doc.data()!["name"];
         setState(() {
-          currentScreen = UserChatroom(chatroomId: uid);
+          currentScreen = UserChatroom(chatroomId: uid, chatroomName: name,);
         });
       }
     });

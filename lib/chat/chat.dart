@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fyp/main/auth/auth.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
+import 'package:fyp/main/menu/about_us.dart';
 
 
 
@@ -15,9 +16,11 @@ class Chat extends StatefulWidget {
 
 class _ChatState extends State<Chat> {
   final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
   var currentUser = FirebaseAuth.instance.currentUser;
 
   String name = "";
+  String error = "";
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +77,10 @@ class _ChatState extends State<Chat> {
                 if (value == 0) {
                   print("User Manual menu is selected.");
                 } else if (value == 1) {
-                  print("About Us menu is selected.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutUs()),
+                  );
                 } else if (value == 2) {
                   Navigator.push(
                     context,
@@ -91,48 +97,68 @@ class _ChatState extends State<Chat> {
               builder: (context, constraints) {
                 if (currentUser == null || currentUser!.isAnonymous == false) {
                   return Container(
-                    /*padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/forest.png"),
-                    fit: BoxFit.cover,
-                  )
-                ),*/
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Have any question?\nLet's talk to us!",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 18,
+                    padding: EdgeInsets.symmetric(horizontal: 50),
+                    child: Form(
+                      key: _formKey,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Have any question?\nLet's talk to us!",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: "alkatra",
+                            ),
                           ),
-                        ),
 
-                        SizedBox(
-                          height: 10,
-                        ),
-
-                        ElevatedButton(
-                          child: Text("OK"),
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.green,
-                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                          SizedBox(
+                            height: 10,
                           ),
-                          onPressed: () async {
-                            dynamic result = await _auth.signInAnonymous();
-                            if (result == null) {
-                              //give error notification;
 
-                            } else {
-                              widget.onSignInPressed!();
+                          TextFormField(
+                            decoration: InputDecoration(
+                              hintText: "Enter your name",
+                            ),
+                            validator: (val) => val!.isEmpty ? "Enter a name" : null,
+                            onChanged: (val) {
+                              setState(() => name = val);
+                            },
+                          ),
 
-                            }
-                          },
-                        ),
+                          SizedBox(
+                            height: 10,
+                          ),
 
-                      ],
+                          ElevatedButton(
+                            child: Text("OK"),
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.green,
+                              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                            ),
+                            onPressed: () async {
+                              if (_formKey.currentState!.validate()) {
+                                dynamic result = await _auth.signInAnonymous(name);
+                                if (result == null) {
+                                  setState(() => error = "Name is invalid");
+                                } else {
+                                  widget.onSignInPressed!();
+                                }
+                              }
+                            },
+                          ),
+
+                          SizedBox(
+                            height: 12,
+                          ),
+
+                          Text(
+                            error,
+                            style: TextStyle(color: Colors.red, fontSize: 14),
+                          ),
+
+                        ],
+                      ),
                     ),
                   );
 

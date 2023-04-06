@@ -6,8 +6,6 @@ import 'package:fyp/main/menu/admin/login.dart';
 import 'package:fyp/main/menu/admin/admin.dart';
 
 
-
-
 class UserManagement {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 

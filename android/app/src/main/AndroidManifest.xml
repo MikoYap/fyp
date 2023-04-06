@@ -9,7 +9,7 @@
 
 
    <application
-        android:label="fyp"
+        android:label="Ulu Gombak Forest Reserve"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
