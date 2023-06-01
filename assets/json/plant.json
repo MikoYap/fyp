@@ -1,79 +1,312 @@
 [
   {
-    "species_name":"sp 1",
-    "common_name":"cm 1",
-    "family":"fm 1",
-    "genus":"gn 1",
-    "image":"assets/images/sp1/sp1.jpg",
+    "species_name":"Pterospermum javanicum",
+    "common_name":"none",
+    "family":"Malvaceae",
+    "genus":"Pterospermum",
+    "image":"assets/imgs/pjavanicum/bark_01.jpg",
     "images": [
-      "assets/images/sp1/sp1a.jpg",
-      "assets/images/sp1/sp1b.jpg",
-      "assets/images/sp1/sp1c.jpg",
-      "assets/images/sp1/sp1d.jpg",
-      "assets/images/sp1/sp1e.jpg"
-    ]
+      "assets/imgs/pjavanicum/bark_01.jpg",
+      "assets/imgs/pjavanicum/bark_02.jpg",
+      "assets/imgs/pjavanicum/bark_03.jpg",
+      "assets/imgs/pjavanicum/bark_04.jpg",
+      "assets/imgs/pjavanicum/bark_05.jpg"
+    ],
+    "link":"assets/pjavanicum.html"
   },
 
   {
-    "species_name":"sp 2",
-    "common_name":"cm 2",
-    "family":"fm 2",
-    "genus":"gn 2",
-    "image":"assets/images/sp2/sp2.jpg",
+    "species_name":"Arenga pinnata",
+    "common_name":"Kabong, sugar palm",
+    "family":"Arecaceae",
+    "genus":"Arenga",
+    "image":"assets/imgs/apinnata/leaf_01.jpg",
     "images":[
-      "assets/images/sp2/sp2a.jpg",
-      "assets/images/sp2/sp2b.jpg",
-      "assets/images/sp2/sp2c.jpg",
-      "assets/images/sp2/sp2d.jpg",
-      "assets/images/sp2/sp2e.jpg",
-      "assets/images/sp2/sp2f.jpg",
-      "assets/images/sp2/sp2g.jpg",
-      "assets/images/sp2/sp2h.jpg"
-    ]
+      "assets/imgs/apinnata/leaf_01.jpg",
+      "assets/imgs/apinnata/whole_01.jpg",
+      "assets/imgs/apinnata/whole_02.jpg",
+      "assets/imgs/apinnata/leaf_02.jpg",
+      "assets/imgs/apinnata/leaf_03.jpg",
+      "assets/imgs/apinnata/leaf_04.jpg",
+      "assets/imgs/apinnata/bark_01.jpg",
+      "assets/imgs/apinnata/whole_03.jpg"
+    ],
+    "link":"assets/apinnata.html"
   },
 
   {
-    "species_name":"Malpighia emarginata Sessé & Moc. ex DC.",
-    "common_name":"Barbados Cherry",
-    "family":"Bartholomeo",
-    "genus":"Bainbrigge",
-    "image":"assets/images/malpighia_emarginata.jpg",
+    "species_name":"Artocarpus elasticus",
+    "common_name":"Terap",
+    "family":"Moraceae",
+    "genus":"Artocarpus",
+    "image":"assets/imgs/aelasticus/whole_01.jpg",
     "images":[
-      "assets/images/sp1/sp1a.jpg",
-      "assets/images/sp1/sp1b.jpg",
-      "assets/images/sp1/sp1c.jpg",
-      "assets/images/sp1/sp1d.jpg",
-      "assets/images/sp1/sp1e.jpg"
-    ]
+      "assets/imgs/aelasticus/whole_01.jpg",
+      "assets/imgs/aelasticus/whole_02.jpg",
+      "assets/imgs/aelasticus/bark_01.jpg",
+      "assets/imgs/aelasticus/bark_02.jpg",
+      "assets/imgs/aelasticus/bark_03.jpg",
+      "assets/imgs/aelasticus/whole_03.jpg",
+      "assets/imgs/aelasticus/bark_04.jpg",
+      "assets/imgs/aelasticus/fruit_01.jpg",
+      "assets/imgs/aelasticus/fruit_02.jpg",
+      "assets/imgs/aelasticus/root_01.jpg",
+      "assets/imgs/aelasticus/whole_04.jpg"
+    ],
+    "link":"assets/aelasticus.html"
   },
 
   {
-    "species_name":"Sabicea cinerea Aubl.",
-    "common_name":"Largeflower Woodvine",
-    "family":"Jdavie",
-    "genus":"Andreolli",
-    "image":"assets/images/sabicea_cinerea.jpg",
+    "species_name":"Trevesia burckii",
+    "common_name":"Tapak hantu",
+    "family":"Araliaceae",
+    "genus":"Trevesia",
+    "image":"assets/imgs/tburckii/leaf_01.jpg",
     "images":[
-      "assets/images/sp1/sp1a.jpg",
-      "assets/images/sp1/sp1b.jpg",
-      "assets/images/sp1/sp1c.jpg",
-      "assets/images/sp1/sp1d.jpg",
-      "assets/images/sp1/sp1e.jpg"
-    ]
+      "assets/imgs/tburckii/whole_01.jpg",
+      "assets/imgs/tburckii/whole_02.jpg",
+      "assets/imgs/tburckii/leaf_01.jpg",
+      "assets/imgs/tburckii/leaf_02.jpg",
+      "assets/imgs/tburckii/bark_01.jpg",
+      "assets/imgs/tburckii/bark_02.jpg"
+    ],
+    "link":"assets/tburckii.html"
   },
 
   {
-    "species_name":"Astragalus whitneyi A. Gray",
-    "common_name":"Balloonpod Milkvetch",
-    "family":"Letisha",
-    "genus":"Pickford",
-    "image":"assets/images/astragalus_whitneyi.jpg",
+    "species_name":"Donax canniformis",
+    "common_name":"Bemban",
+    "family":"Marantaceae",
+    "genus":"Donax",
+    "image":"assets/imgs/dcanniformis/leaf_01.jpg",
     "images":[
-      "assets/images/sp1/sp1a.jpg",
-      "assets/images/sp1/sp1b.jpg",
-      "assets/images/sp1/sp1c.jpg",
-      "assets/images/sp1/sp1d.jpg",
-      "assets/images/sp1/sp1e.jpg"
-    ]
+      "assets/imgs/dcanniformis/leaf_01.jpg",
+      "assets/imgs/dcanniformis/whole_01.jpg",
+      "assets/imgs/dcanniformis/bark_01.jpg"
+    ],
+    "link":"assets/dcanniformis.html"
+  },
+
+  {
+    "species_name":"Knema",
+    "common_name":"Penarahan",
+    "family":"Myristicaceae",
+    "genus":"Knema",
+    "image":"assets/imgs/k/leaf_02.jpg",
+    "images":[
+      "assets/imgs/k/whole_01.jpg",
+      "assets/imgs/k/leaf_01.jpg",
+      "assets/imgs/k/flower_01.jpg",
+      "assets/imgs/k/flower_02.jpg",
+      "assets/imgs/k/leaf_02.jpg",
+      "assets/imgs/k/bark_01.jpg",
+      "assets/imgs/k/flower_03.jpg"
+    ],
+    "link":"assets/k.html"
+  },
+
+  {
+    "species_name":"Bauhinia sp.",
+    "common_name":"Tapak unta",
+    "family":"Fabaceae",
+    "genus":"Bauhinia",
+    "image":"assets/imgs/bsp/stem_02.jpg",
+    "images":[
+      "assets/imgs/bsp/bark_01.jpg",
+      "assets/imgs/bsp/bark_02.jpg",
+      "assets/imgs/bsp/bark_03.jpg",
+      "assets/imgs/bsp/bark_04.jpg",
+      "assets/imgs/bsp/bark_05.jpg",
+      "assets/imgs/bsp/whole_01.jpg",
+      "assets/imgs/bsp/whole_02.jpg",
+      "assets/imgs/bsp/leaf_01.jpg",
+      "assets/imgs/bsp/leaf_02.jpg",
+      "assets/imgs/bsp/stem_01.jpg",
+      "assets/imgs/bsp/stem_02.jpg",
+      "assets/imgs/bsp/stem_03.jpg",
+      "assets/imgs/bsp/leaf_03.jpg"
+    ],
+    "link":"assets/bsp.html"
+  },
+
+  {
+    "species_name":"Ficus sp. (hemiepiphytic)",
+    "common_name":"Ara",
+    "family":"Moraceae",
+    "genus":"Ficus",
+    "image":"assets/imgs/fsphemiepiphytic/stem_01.jpg",
+    "images":[
+      "assets/imgs/fsphemiepiphytic/stem_01.jpg",
+      "assets/imgs/fsphemiepiphytic/stem_02.jpg",
+      "assets/imgs/fsphemiepiphytic/stem_03.jpg",
+      "assets/imgs/fsphemiepiphytic/stem_04.jpg"
+    ],
+    "link":"assets/fsphemiepiphytic.html"
+  },
+
+  {
+    "species_name":"Myrialepis scortechinii",
+    "common_name":"Rotan",
+    "family":"Arecaceae",
+    "genus":"Myrialepis",
+    "image":"assets/imgs/mscortechinii/stem_08.jpg",
+    "images":[
+      "assets/imgs/mscortechinii/stem_01.jpg",
+      "assets/imgs/mscortechinii/stem_02.jpg",
+      "assets/imgs/mscortechinii/stem_03.jpg",
+      "assets/imgs/mscortechinii/stem_04.jpg",
+      "assets/imgs/mscortechinii/stem_05.jpg",
+      "assets/imgs/mscortechinii/stem_06.jpg",
+      "assets/imgs/mscortechinii/whole_01.jpg",
+      "assets/imgs/mscortechinii/stem_07.jpg",
+      "assets/imgs/mscortechinii/leaf_01.jpg",
+      "assets/imgs/mscortechinii/leaf_02.jpg",
+      "assets/imgs/mscortechinii/leaf_03.jpg",
+      "assets/imgs/mscortechinii/whole_02.jpg",
+      "assets/imgs/mscortechinii/stem_08.jpg",
+      "assets/imgs/mscortechinii/leaf_04.jpg"
+    ],
+    "link":"assets/mscortechinii.html"
+  },
+
+  {
+    "species_name":"Scaphium linearicarpum",
+    "common_name":"Kembang semangkuk daun bulat",
+    "family":"Malvaceae",
+    "genus":"Scaphium",
+    "image":"assets/imgs/slinearicarpum/bark_02.jpg",
+    "images":[
+      "assets/imgs/slinearicarpum/bark_01.jpg",
+      "assets/imgs/slinearicarpum/bark_02.jpg",
+      "assets/imgs/slinearicarpum/whole_01.jpg",
+      "assets/imgs/slinearicarpum/leaf_01.jpg",
+      "assets/imgs/slinearicarpum/whole_02.jpg",
+      "assets/imgs/slinearicarpum/whole_03.jpg",
+      "assets/imgs/slinearicarpum/leaf_02.jpg",
+      "assets/imgs/slinearicarpum/leaf_03.jpg"
+    ],
+    "link":"assets/slinearicarpum.html"
+  },
+
+  {
+    "species_name":"Alstonia sp.",
+    "common_name":"Pulai",
+    "family":"Apocynaceae",
+    "genus":"Alstonia",
+    "image":"assets/imgs/asp/leaf_05.jpg",
+    "images":[
+      "assets/imgs/asp/bark_01.jpg",
+      "assets/imgs/asp/whole_01.jpg",
+      "assets/imgs/asp/bark_02.jpg",
+      "assets/imgs/asp/bark_03.jpg",
+      "assets/imgs/asp/leaf_01.jpg",
+      "assets/imgs/asp/leaf_02.jpg",
+      "assets/imgs/asp/leaf_03.jpg",
+      "assets/imgs/asp/leaf_04.jpg",
+      "assets/imgs/asp/leaf_05.jpg"
+    ],
+    "link":"assets/asp.html"
+  },
+
+  {
+    "species_name":"Ficus sp.",
+    "common_name":"Ara",
+    "family":"Moraceae",
+    "genus":"Ficus",
+    "image":"assets/imgs/fsp/whole_02.jpg",
+    "images":[
+      "assets/imgs/fsp/bark_01.jpg",
+      "assets/imgs/fsp/whole_01.jpg",
+      "assets/imgs/fsp/whole_02.jpg",
+      "assets/imgs/fsp/whole_03.jpg",
+      "assets/imgs/fsp/whole_04.jpg",
+      "assets/imgs/fsp/bark_02.jpg",
+      "assets/imgs/fsp/bark_03.jpg",
+      "assets/imgs/fsp/bark_04.jpg",
+      "assets/imgs/fsp/bark_05.jpg",
+      "assets/imgs/fsp/bark_06.jpg",
+      "assets/imgs/fsp/bark_07.jpg",
+      "assets/imgs/fsp/bark_08.jpg",
+      "assets/imgs/fsp/leaf_01.jpg"
+    ],
+    "link":"assets/fsp.html"
+  },
+
+  {
+    "species_name":"Campnospermum auriculatum",
+    "common_name":"Terentang",
+    "family":"Anacardiaceae",
+    "genus":"Cauriculatum",
+    "image":"assets/imgs/cauriculatum/whole_02.jpg",
+    "images":[
+      "assets/imgs/cauriculatum/bark_01.jpg",
+      "assets/imgs/cauriculatum/whole_01.jpg",
+      "assets/imgs/cauriculatum/whole_02.jpg",
+      "assets/imgs/cauriculatum/whole_03.jpg",
+      "assets/imgs/cauriculatum/leaf_01.jpg",
+      "assets/imgs/cauriculatum/leaf_02.jpg",
+      "assets/imgs/cauriculatum/bark_02.jpg",
+      "assets/imgs/cauriculatum/bark_03.jpg"
+    ],
+    "link":"assets/cauriculatum.html"
+  },
+
+  {
+    "species_name":"Syzygium sp.",
+    "common_name":"Jambu hutan",
+    "family":"Myrtaceae",
+    "genus":"Syzygium",
+    "image":"assets/imgs/syzygiumsp/whole_01.jpg",
+    "images":[
+      "assets/imgs/syzygiumsp/bark_01.jpg",
+      "assets/imgs/syzygiumsp/whole_01.jpg",
+      "assets/imgs/syzygiumsp/whole_02.jpg",
+      "assets/imgs/syzygiumsp/whole_03.jpg",
+      "assets/imgs/syzygiumsp/bark_02.jpg",
+      "assets/imgs/syzygiumsp/bark_03.jpg",
+      "assets/imgs/syzygiumsp/whole_04.jpg",
+      "assets/imgs/syzygiumsp/bark_04.jpg"
+    ],
+    "link":"assets/syzygiumsp.html"
+  },
+
+  {
+    "species_name":"Saraca thaipingensis",
+    "common_name":"Gapis",
+    "family":"Fabaceae",
+    "genus":"Saraca",
+    "image":"assets/imgs/sthaipingensis/whole_03.jpg",
+    "images":[
+      "assets/imgs/sthaipingensis/bark_01.jpg",
+      "assets/imgs/sthaipingensis/whole_01.jpg",
+      "assets/imgs/sthaipingensis/leaf_01.jpg",
+      "assets/imgs/sthaipingensis/whole_02.jpg",
+      "assets/imgs/sthaipingensis/leaf_02.jpg",
+      "assets/imgs/sthaipingensis/leaf_03.jpg",
+      "assets/imgs/sthaipingensis/whole_03.jpg",
+      "assets/imgs/sthaipingensis/leaf_04.jpg",
+      "assets/imgs/sthaipingensis/flower_01.jpg",
+      "assets/imgs/sthaipingensis/flower_02.jpg"
+    ],
+    "link":"assets/sthaipingensis.html"
+  },
+
+  {
+    "species_name":"Shorea sp.",
+    "common_name":"none",
+    "family":"Dipterocarpaceae",
+    "genus":"Shorea",
+    "image":"assets/imgs/shoreasp/leaf_02.jpg",
+    "images":[
+      "assets/imgs/shoreasp/bark_01.jpg",
+      "assets/imgs/shoreasp/whole_01.jpg",
+      "assets/imgs/shoreasp/whole_02.jpg",
+      "assets/imgs/shoreasp/bark_02.jpg",
+      "assets/imgs/shoreasp/bark_03.jpg",
+      "assets/imgs/shoreasp/bark_04.jpg",
+      "assets/imgs/shoreasp/leaf_01.jpg",
+      "assets/imgs/shoreasp/leaf_02.jpg"
+    ],
+    "link":"assets/shoreasp.html"
   }
 ]

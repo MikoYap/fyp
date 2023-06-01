@@ -61,6 +61,24 @@ class _AdminChatroomState extends State<AdminChatroom> {
             backgroundColor: Colors.transparent,
           ),
           onPressed: () async {
+            await _firestore
+                .collection("chatroom")
+                .doc(widget.chatroomId)
+                .collection("chats")
+                .get()
+                .then((snapshot) {
+              snapshot.docs.forEach((doc) async {
+                await _firestore
+                    .collection("chatroom")
+                    .doc(widget.chatroomId)
+                    .collection("chats")
+                    .doc(doc.id)
+                    .set({
+                  "read": true
+                }, SetOptions(merge: true));
+              });
+            });
+
             Navigator.pop(context);
           },
         ),
@@ -219,6 +237,8 @@ class _AdminChatroomState extends State<AdminChatroom> {
       await _firestore
           .collection("chatroom")
           .doc(widget.chatroomId).set({
+        "uid": widget.chatroomId,
+        "name": widget.chatroomName,
         "time": FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
 
@@ -268,6 +288,7 @@ class _AdminChatroomState extends State<AdminChatroom> {
         .collection("chatroom")
         .doc(widget.chatroomId).set({
           "uid": widget.chatroomId,
+          "name": widget.chatroomName,
           "time": FieldValue.serverTimestamp(),
         });
 

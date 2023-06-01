@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fyp/data/plant.dart';
-import 'package:fyp/collection/repository.dart';
+import 'package:fyp/data/plant_data.dart';
+import 'package:fyp/data/repository.dart';
 import 'package:fyp/collection/plant_tile.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
 import 'package:fyp/main/menu/about_us.dart';
+import 'package:fyp/main/menu/user_manual.dart';
 
 
 
@@ -28,7 +29,7 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
   @override
   void initState() {
     super.initState();
-    readJsonData().then((value) {
+    readJsonPlantData().then((value) {
       setState(() {
         _plants.addAll(value);
         _plantsDisplay = _plants;
@@ -36,18 +37,12 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
     });
 
     scrollController.addListener(() { //scroll listener
-      double showoffset = 10.0; //Back to top botton will show on scroll offset 10.0
+      double showoffset = 10.0; //Back to top button will show on scroll offset 10.0
 
       if(scrollController.offset > showoffset){
         showbtn = true;
-        setState(() {
-          //update state
-        });
       } else {
         showbtn = false;
-        setState(() {
-          //update state
-        });
       }
     });
 
@@ -115,7 +110,10 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
 
               onSelected: (value) {
                 if (value == 0) {
-                  print("User Manual menu is selected.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserManual()),
+                  );
                 } else if (value == 1) {
                   Navigator.push(
                     context,

@@ -10,6 +10,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
 import 'package:fyp/main/menu/about_us.dart';
+import 'package:fyp/main/menu/user_manual.dart';
 
 
 
@@ -51,18 +52,6 @@ class _UserChatroomState extends State<UserChatroom> {
         backgroundColor: Colors.white,
         elevation: 0,
 
-        /*flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: <Color>[
-                  Color.fromRGBO(7, 113, 9, 1),
-                  Color.fromRGBO(199, 248, 0, 1)
-                ]),
-          ),
-        ),*/
-
         actions: [
           PopupMenuButton(
               icon: Icon(
@@ -90,8 +79,11 @@ class _UserChatroomState extends State<UserChatroom> {
 
               onSelected: (value) {
                 if (value == 0) {
-                  print("User Manual menu is selected.");
-                } else if (value == 1) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserManual()),
+                  );
+                }  else if (value == 1) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => AboutUs()),
@@ -262,7 +254,7 @@ class _UserChatroomState extends State<UserChatroom> {
         "uid": widget.chatroomId,
         "name": widget.chatroomName,
         "time": FieldValue.serverTimestamp(),
-      });
+      }, SetOptions(merge: true));
 
       _message.clear();
       _scrollController.animateTo(
@@ -408,9 +400,7 @@ class _UserChatroomState extends State<UserChatroom> {
                   child: InkWell(
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => showImage(
-                          imageUrl: map["messages"],
-                        ),
+                        builder: (_) => showImage(imageUrl: map["messages"]),
                       ),
                     ),
                     child: Container(

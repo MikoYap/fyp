@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fyp/main/auth/auth.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
 import 'package:fyp/main/menu/about_us.dart';
+import 'package:fyp/main/menu/user_manual.dart';
 
 
 
@@ -36,18 +37,6 @@ class _ChatState extends State<Chat> {
         backgroundColor: Colors.white,
         elevation: 0,
 
-        /*flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: <Color>[
-                  Color.fromRGBO(7, 113, 9, 1),
-                  Color.fromRGBO(199, 248, 0, 1)
-                ]),
-          ),*/
-
-
         actions: [
           PopupMenuButton(
               icon: Icon(
@@ -75,7 +64,10 @@ class _ChatState extends State<Chat> {
 
               onSelected: (value) {
                 if (value == 0) {
-                  print("User Manual menu is selected.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserManual()),
+                  );
                 } else if (value == 1) {
                   Navigator.push(
                     context,
@@ -95,6 +87,7 @@ class _ChatState extends State<Chat> {
       body: Center(
           child: LayoutBuilder(
               builder: (context, constraints) {
+                // User haven't login
                 if (currentUser == null || currentUser!.isAnonymous == false) {
                   return Container(
                     padding: EdgeInsets.symmetric(horizontal: 50),
@@ -162,6 +155,7 @@ class _ChatState extends State<Chat> {
                     ),
                   );
 
+                  // User already login
                 } else {
                   print("This is anonymous uid");
                   print(currentUser?.uid);

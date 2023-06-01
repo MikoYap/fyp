@@ -1,0 +1,50 @@
+/* homeStyle.css */
+
+/**/
+/* Body size adjusting */	
+
+body {
+	margin: 0;
+	background-color: #F2FFF7;
+}
+body > div {
+	padding: 0 130px;
+}	
+
+
+/* navBar */
+.navBar {
+	overflow: hidden;
+	background-color: #0B2B26;
+}
+.navBar a {
+	float: left;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding: 15px 30px;
+	text-decoration: none;
+}
+.navBar a:hover {
+	color: black;
+	background-color: #76F7A5;
+	cursor: pointer;
+}
+
+
+/* Content */
+p {
+	font-family: arial;
+	text-align: justify;
+}
+
+
+/* Footer */
+.footer {
+	background-color: #A2F8A0;
+	text-align: center;
+	margin-top: 80px;
+}
+.footerContent {
+	padding: 20px 0;
+}

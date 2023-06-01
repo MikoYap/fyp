@@ -37,7 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   qr_code_scanner: ^1.0.1
-  url_launcher: ^6.1.7
+  url_launcher: ^6.1.11
   carousel_slider: ^4.2.1
   shadow_overlay: ^1.0.5
 
@@ -54,8 +54,10 @@ dependencies:
   uuid: ^3.0.7
   flutter_slidable: ^2.0.0
 
-  google_maps_flutter: ^2.2.5
+  google_maps_flutter: ^2.2.6
   geolocator: ^9.0.2
+
+  webview_flutter_plus: ^0.3.0+2
 
 
 dev_dependencies:
@@ -80,12 +82,46 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/plantHome.html
+    - assets/plantList.html
+    - assets/aelasticus.html
+    - assets/apinnata.html
+    - assets/asp.html
+    - assets/bsp.html
+    - assets/cauriculatum.html
+    - assets/dcanniformis.html
+    - assets/fsp.html
+    - assets/fsphemiepiphytic.html
+    - assets/k.html
+    - assets/mscortechinii.html
+    - assets/pjavanicum.html
+    - assets/shoreasp.html
+    - assets/slinearicarpum.html
+    - assets/sthaipingensis.html
+    - assets/syzygiumsp.html
+    - assets/tburckii.html
+    - assets/homeStyle.css
     - assets/json/plant.json
-    - assets/images/
-    - assets/images/sp1/
-    - assets/images/sp2/
-    - assets/images/um_logo.png
-
+    - assets/json/location.json
+    - assets/imgs/
+    - assets/imgs/pjavanicum/
+    - assets/imgs/apinnata/
+    - assets/imgs/aelasticus/
+    - assets/imgs/tburckii/
+    - assets/imgs/dcanniformis/
+    - assets/imgs/k/
+    - assets/imgs/bsp/
+    - assets/imgs/fsphemiepiphytic/
+    - assets/imgs/mscortechinii/
+    - assets/imgs/slinearicarpum/
+    - assets/imgs/asp/
+    - assets/imgs/fsp/
+    - assets/imgs/cauriculatum/
+    - assets/imgs/syzygiumsp/
+    - assets/imgs/sthaipingensis/
+    - assets/imgs/shoreasp/
+    - assets/imgs/home/
+    - assets/imgs/user_manual/
 
   fonts:
     - family: CustomIcons

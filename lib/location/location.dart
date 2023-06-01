@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:fyp/main/menu/admin/user_management.dart';
 import 'package:fyp/main/menu/about_us.dart';
+import 'package:fyp/data/location_data.dart';
+import 'package:fyp/data/repository.dart';
+import 'package:fyp/main/menu/user_manual.dart';
 
 
 
@@ -13,28 +16,27 @@ class Location extends StatefulWidget {
 }
 
 class _LocationState extends State<Location> {
-  late GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(3.30197, 101.78273);
+  late GoogleMapController mapController;
+  final LatLng _center = const LatLng(3.32490, 101.75189);
+
+  List<LocationData> _locations = <LocationData>[];
+  List<LocationData> _locationsDisplay = <LocationData>[];
+
+  @override
+  void initState() {
+    super.initState();
+    readJsonLocationData().then((value) {
+      setState(() {
+        _locations.addAll(value);
+        _locationsDisplay = _locations;
+      });
+    });
+  }
 
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
   }
-
-  static final Marker _uluGombakForestReserve = Marker(
-    markerId: MarkerId("_uluGombakForestReserve"),
-    infoWindow: InfoWindow(title: "Ulu Gombak Forest Reserve"),
-    icon: BitmapDescriptor.defaultMarker,
-    position: LatLng(3.30197, 101.78273),
-  );
-
-  static final Marker _sp1 = Marker(
-    markerId: MarkerId("_sp1"),
-    infoWindow: InfoWindow(title: "Sp1"),
-    icon: BitmapDescriptor.defaultMarker,
-    position: LatLng(3.32503, 101.75242),
-  );
-
 
   @override
   Widget build(BuildContext context) {
@@ -49,15 +51,6 @@ class _LocationState extends State<Location> {
         ),
         backgroundColor: Colors.white,
         elevation: 0,
-
-        /*flexibleSpace: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: <Color>[Color.fromRGBO(7, 113, 9, 1), Color.fromRGBO(199, 248, 0, 1)]),
-        ),
-      ),*/
 
         actions: [
           PopupMenuButton(
@@ -86,7 +79,10 @@ class _LocationState extends State<Location> {
 
               onSelected: (value) {
                 if (value == 0) {
-                  print("User Manual menu is selected.");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserManual()),
+                  );
                 } else if (value == 1) {
                   Navigator.push(
                     context,
@@ -105,14 +101,16 @@ class _LocationState extends State<Location> {
 
       body: GoogleMap(
         mapType: MapType.normal,
-        markers: {
-          _uluGombakForestReserve,
-          _sp1,
-        },
+        markers: Set<Marker>.from(_locationsDisplay.map((location) => Marker(
+          markerId: MarkerId(location.marker_id!),
+          infoWindow: InfoWindow(title: location.name!),
+          icon: BitmapDescriptor.defaultMarker,
+          position: location.getLatLng(),
+        ))),
         onMapCreated: _onMapCreated,
         initialCameraPosition: CameraPosition(
           target: _center,
-          zoom: 11.0,
+          zoom: 18.0,
         ),
       ),
     );

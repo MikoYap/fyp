@@ -43,13 +43,12 @@ class _BottomNavAppState extends State<BottomNavApp> {
         });
       }
     });
-
   }
 
 
   @override
   Widget build(BuildContext context) {
-    bool showFab = MediaQuery.of(context).viewInsets.bottom != 0;
+    bool showFab = MediaQuery.of(context).viewInsets.bottom == 0;
 
     return Scaffold(
       body: PageStorage(
@@ -58,7 +57,7 @@ class _BottomNavAppState extends State<BottomNavApp> {
       ),
 
       floatingActionButton: Visibility(
-        visible: !showFab,
+        visible: showFab,
         child: Container(
           alignment: Alignment.bottomCenter,
           padding: EdgeInsets.only(bottom: 5),
@@ -77,8 +76,8 @@ class _BottomNavAppState extends State<BottomNavApp> {
                     begin: Alignment.bottomLeft,
                     end: Alignment.topRight,
                     colors: <Color>[
-                      Color.fromRGBO(7, 113, 9, 1),
-                      Color.fromRGBO(199, 248, 0, 1)
+                      Color(0xff77109),
+                      Color(0xffC7F800)
                     ]
                 ),
               ),

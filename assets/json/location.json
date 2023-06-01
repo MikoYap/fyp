@@ -1,0 +1,113 @@
+[
+  {
+    "marker_id":"pjavanicum",
+    "name":"Pterospermum javanicum",
+    "lat": 3.32483,
+    "lng": 101.75238
+  },
+
+  {
+    "marker_id":"apinnata",
+    "name":"Arenga pinnata",
+    "lat": 3.32493,
+    "lng": 101.75244
+  },
+
+  {
+    "marker_id":"aelasticus",
+    "name":"Artocarpus elasticus",
+    "lat": 3.32485,
+    "lng": 101.75160
+  },
+
+  {
+    "marker_id":"tburckii",
+    "name":"Trevesia burckii",
+    "lat": 3.32493,
+    "lng": 101.75222
+  },
+
+  {
+    "marker_id":"dcanniformis",
+    "name":"Donax canniformis",
+    "lat": 3.32490,
+    "lng": 101.75222
+  },
+
+  {
+    "marker_id":"k",
+    "name":"Knema",
+    "lat": 3.32490,
+    "lng": 101.75189
+  },
+
+  {
+    "marker_id":"bsp",
+    "name":"Bauhinia sp.",
+    "lat": 3.32485,
+    "lng": 101.75160
+  },
+
+  {
+    "marker_id":"Fsphemiepiphytic",
+    "name":"Ficus sp. (hemiepiphytic)",
+    "lat": 3.32480,
+    "lng": 101.75158
+  },
+
+  {
+    "marker_id":"mscortechinii",
+    "name":"Myrialepis scortechinii",
+    "lat": 3.32465,
+    "lng": 101.75135
+  },
+
+  {
+    "marker_id":"slinearicarpum",
+    "name":"Scaphium linearicarpum",
+    "lat": 3.32450,
+    "lng": 101.75139
+  },
+
+  {
+    "marker_id":"asp",
+    "name":"Alstonia sp.",
+    "lat": 3.32475,
+    "lng": 101.75113
+  },
+
+  {
+    "marker_id":"fsp",
+    "name":"Ficus sp.",
+    "lat": 3.32479,
+    "lng": 101.75117
+  },
+
+  {
+    "marker_id":"cauriculatum",
+    "name":"Campnospermum auriculatum",
+    "lat": 3.32510,
+    "lng": 101.75123
+  },
+
+  {
+    "marker_id":"syzygiumsp",
+    "name":"Syzygium sp.",
+    "lat": 3.32518,
+    "lng": 101.75119
+  },
+
+  {
+    "marker_id":"sthaipingensis",
+    "name":"Saraca thaipingensis",
+    "lat": 3.32528,
+    "lng": 101.75113
+  },
+
+  {
+    "marker_id":"shoreasp",
+    "name":"Shorea sp.",
+    "lat": 3.32499,
+    "lng": 101.75135
+  }
+]

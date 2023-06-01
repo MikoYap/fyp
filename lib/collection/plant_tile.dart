@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fyp/data/plant.dart';
+import 'package:fyp/data/plant_data.dart';
 import 'package:fyp/collection/plant_details.dart';
 
 
@@ -82,5 +82,4 @@ class PlantTile extends StatelessWidget {
       ),
     );
   }
-
 }

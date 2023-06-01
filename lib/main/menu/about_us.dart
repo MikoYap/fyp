@@ -36,7 +36,7 @@ class AboutUs extends StatelessWidget {
         alignment: Alignment.topCenter,
         margin: EdgeInsets.only(top: 150),
         child: Image.asset(
-          "assets/images/um_logo.png",
+          "assets/imgs/um_logo.png",
           height: 250,
           width: 250,
           fit: BoxFit.cover,

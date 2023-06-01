@@ -51,7 +51,6 @@ class _LoginState extends State<Login> {
         ),
       ),
 
-
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
         child: Form(
@@ -111,84 +110,10 @@ class _LoginState extends State<Login> {
                 error,
                 style: TextStyle(color: Colors.red, fontSize: 14),
               ),
-
             ],
           ),
         ),
-
       ),
-
-
-
-
-
-
-
-
-
-
-      /*body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Username
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 50),
-              child: TextFormField(
-                controller: usernameController,
-                decoration: InputDecoration(
-                  hintText: "Enter your username",
-                ),
-              ),
-            ),
-
-            // Password
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 50),
-              child: TextFormField(
-                controller: passwordController,
-                decoration: InputDecoration(
-                  hintText: "Enter your password",
-                ),
-                obscureText: true,
-              ),
-            ),
-
-            SizedBox(
-              height: 16.0,
-            ),
-
-            // Login
-            Container(
-              height: 40,
-              width: MediaQuery.of(context).size.width / 3,
-              color: Colors.green,
-              child: ElevatedButton(
-                child: Text("Login"),
-                onPressed: () {
-                  final String email  = usernameController.text.trim();
-                  final String password  = passwordController.text.trim();
-
-                  if (email.isEmpty) {
-                    print("Email is Empty");
-                  } else {
-                    if (password.isEmpty) {
-                      print("Password is Empty");
-                    } else {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => AdminScreen())
-                      );
-                    }
-                  }
-
-
-                },
-              ),
-            )
-          ],
-        ),
-      ),*/
     );
   }
 }
