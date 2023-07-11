@@ -41,8 +41,14 @@ class _CollectionState extends State<Collection> with WidgetsBindingObserver{
 
       if(scrollController.offset > showoffset){
         showbtn = true;
+        setState(() {
+          //update state
+        });
       } else {
         showbtn = false;
+        setState(() {
+          //update state
+        });
       }
     });
 

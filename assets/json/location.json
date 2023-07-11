@@ -44,12 +44,12 @@
   {
     "marker_id":"bsp",
     "name":"Bauhinia sp.",
-    "lat": 3.32485,
+    "lat": 3.32487,
     "lng": 101.75160
   },
 
   {
-    "marker_id":"Fsphemiepiphytic",
+    "marker_id":"fsphemiepiphytic",
     "name":"Ficus sp. (hemiepiphytic)",
     "lat": 3.32480,
     "lng": 101.75158
